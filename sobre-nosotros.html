@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradicom S.A. | Sobre Nosotros - Nuestra Historia y Valores</title>
+  <!-- Etiquetas Meta para SEO -->
+  <meta name="description" content="Conoce la trayectoria de Tradicom S.A., nuestra infraestructura operativa, filosofía organizacional, misión, visión y objetivos estratégicos.">
+  <meta name="keywords" content="Tradicom, Nosotros, Misión, Visión, Historia, Almacenamiento, Flota de Camiones, Logística, Objetivos">
+  <meta name="author" content="Tradicom S.A.">
+  <!-- Enlace a la hoja de estilos compartida -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de Navegación (Sticky y Responsiva) -->
+  <header>
+    <div class="container nav-container">
+      <!-- Logotipo y Nombre de la Empresa -->
+      <a href="index.html" class="logo" id="logoLink">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5L90 28.1V74.4L50 97.5L10 74.4V28.1L50 5Z" fill="url(#logo-gradient)" />
+          <path d="M30 45L40 45L43 37L70 37V55L65 55L63 60L57 60L55 55L45 55L43 60L37 60L35 55L30 55V45Z" fill="#ff6b00" />
+          <circle cx="41" cy="60" r="4" fill="white" />
+          <circle cx="61" cy="60" r="4" fill="white" />
+          <path d="M58 40H67V47H58V40Z" fill="white" />
+          <path d="M48 40H55V47H48V40Z" fill="white" />
+          <defs>
+            <linearGradient id="logo-gradient" x1="10" y1="5" x2="90" y2="97.5" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2563eb" />
+              <stop offset="100%" stop-color="#0b1a30" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text">Tradicom<span>.</span></div>
+      </a>
+
+      <!-- Enlaces de navegación con 'Sobre Nosotros' activo -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-nosotros.html" class="active">Sobre Nosotros</a></li>
+          <li class="nav-cta"><a href="contacto.html" id="navContactBtn">Contáctanos</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón de menú tipo hamburguesa para vista móvil -->
+      <button class="menu-toggle" aria-label="Abrir menú de navegación" id="menuToggleBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner Superior de Presentación de la Página -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Sobre <span>Nosotros</span></h1>
+      <p>Conoce la trayectoria, la capacidad técnica y los valores fundamentales de la empresa líder en soluciones logísticas nacionales.</p>
+    </div>
+  </section>
+
+  <!-- Sección de Trayectoria, Infraestructura y Alianzas (Slider) -->
+  <section id="detalles-nosotros">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Trayectoria y Recursos</span>
+        <h2>Nuestra <span>Operación</span></h2>
+        <p>Tres pilares que describen quiénes somos, cómo operamos y con quiénes trabajamos día a día.</p>
+      </div>
+
+      <!-- Componente Slider/Carrusel Interactivo -->
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          
+          <!-- Diapositiva 1: Historia -->
+          <div class="slide active">
+            <div class="slide-image">
+              <img src="assets/history.jpg" alt="Equipo Tradicom planificando logística">
+            </div>
+            <div class="slide-content">
+              <span class="slide-tag">Nuestra Historia</span>
+              <h3>Décadas de evolución e innovación en transporte</h3>
+              <p>Nacimos con la visión de transformar el transporte terrestre de mercancías. A lo largo de los años, nos hemos consolidado como un aliado estratégico fundamental, adaptándonos a las nuevas tecnologías y optimizando los procesos para ofrecer un servicio transparente, rápido y de absoluta confianza para nuestros clientes.</p>
+              <div class="slide-stats">
+                <div class="stat-item">
+                  <div class="stat-number">+15 Años</div>
+                  <div class="stat-label">Liderando el Sector</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">+50k TN</div>
+                  <div class="stat-label">Carga Anual Transportada</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diapositiva 2: Infraestructura -->
+          <div class="slide">
+            <div class="slide-image">
+              <img src="assets/infrastructure.jpg" alt="Almacén logístico de Tradicom">
+            </div>
+            <div class="slide-content">
+              <span class="slide-tag">Infraestructura</span>
+              <h3>Capacidad operativa y flota de última generación</h3>
+              <p>Contamos con una de las flotas más modernas y diversificadas del sector, equipada con tecnología de geolocalización satelital (GPS). Nuestros centros de distribución estratégicos y almacenes automatizados garantizan el correcto almacenamiento y manejo de cualquier tipo de mercancía, resguardando la cadena de frío y de seguridad.</p>
+              <div class="slide-stats">
+                <div class="stat-item">
+                  <div class="stat-number">+200</div>
+                  <div class="stat-label">Unidades de Transporte</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">10k m²</div>
+                  <div class="stat-label">Área de Distribución</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diapositiva 3: Alianzas comerciales -->
+          <div class="slide">
+            <div class="slide-image">
+              <img src="assets/companies.jpg" alt="Transporte mercante y alianzas corporativas">
+            </div>
+            <div class="slide-content">
+              <span class="slide-tag">Alianzas Comerciales</span>
+              <h3>Respaldados por las empresas líderes del mercado</h3>
+              <p>Trabajamos en conjunto con corporaciones nacionales y multinacionales líderes de diversas industrias (alimentos, retail, manufactura e industrial). Nuestras alianzas estratégicas nos permiten expandir la cobertura de rutas y garantizar que tu producto llegue a cualquier destino con la máxima agilidad y competitividad de costo.</p>
+              <div class="slide-stats">
+                <div class="stat-item">
+                  <div class="stat-number">+120</div>
+                  <div class="stat-label">Clientes Corporativos</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">99.8%</div>
+                  <div class="stat-label">Índice de Satisfacción</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botones de Control de Navegación del Slider -->
+        <button class="slider-control slider-control-prev" aria-label="Anterior" id="slidePrevBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="slider-control slider-control-next" aria-label="Siguiente" id="slideNextBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Indicadores de Puntos del Slider -->
+        <div class="slider-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Filosofía Organizacional (Misión y Visión) -->
+  <section id="filosofia" class="section-bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Nuestros Valores</span>
+        <h2>Filosofía <span>Organizacional</span></h2>
+        <p>Guiamos cada decisión de negocio y cada ruta de transporte bajo principios éticos y operativos sólidos.</p>
+      </div>
+
+      <div class="filosofia-grid">
+        <!-- Misión -->
+        <div class="filosofia-card mision">
+          <div class="filosofia-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+          </div>
+          <h3>Nuestra Misión</h3>
+          <p>Ofrecer servicios logísticos y de transporte terrestre de mercancías con los más altos estándares de calidad, puntualidad y seguridad. Buscamos optimizar la cadena de valor de nuestros clientes, convirtiéndonos en su socio de confianza mediante soluciones tecnológicas y un equipo humano altamente capacitado.</p>
+          <div class="filosofia-pillars">
+            <div class="pillar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Excelencia operativa
+            </div>
+            <div class="pillar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Enfoque centrado en el cliente
+            </div>
+            <div class="pillar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Seguridad en toda la cadena
+            </div>
+          </div>
+          <!-- Watermark decorativo SVG -->
+          <svg class="filosofia-watermark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+
+        <!-- Visión -->
+        <div class="filosofia-card vision">
+          <div class="filosofia-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </div>
+          <h3>Nuestra Visión</h3>
+          <p>Consolidarnos para el año 2030 como la empresa líder en soluciones logísticas integrales en la región, reconocida por nuestra innovación tecnológica, sostenibilidad ambiental al optimizar rutas para reducir emisiones, y por brindar una respuesta rápida y adaptable ante los retos del mercado global.</p>
+          <div class="filosofia-pillars">
+            <div class="pillar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Liderazgo tecnológico y tracking
+            </div>
+            <div class="pillar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Logística verde y sustentable
+            </div>
+            <div class="pillar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Expansión y cobertura nacional
+            </div>
+          </div>
+          <!-- Watermark decorativo SVG -->
+          <svg class="filosofia-watermark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Objetivos Estratégicos -->
+  <section id="objetivos" style="background-color: var(--bg-dark); color: var(--text-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag" style="background-color: rgba(255,107,0,0.15);">Nuestras Metas</span>
+        <h2 style="color: var(--primary-white);">Objetivos <span>Estratégicos</span></h2>
+        <p style="color: rgba(255,255,255,0.6);">Los pilares que guían nuestro crecimiento y aseguran el éxito a largo plazo de nuestros servicios.</p>
+      </div>
+
+      <div class="objetivos-grid">
+        <!-- Objetivo 1 -->
+        <div class="objetivo-card">
+          <div class="objetivo-number">01</div>
+          <h3>Puntualidad Absoluta</h3>
+          <p>Cumplir con el 99.5% de los tiempos de entrega programados a través de planes de contingencia en ruta y planeación analítica avanzada.</p>
+        </div>
+
+        <!-- Objetivo 2 -->
+        <div class="objetivo-card">
+          <div class="objetivo-number">02</div>
+          <h3>Seguridad Integral</h3>
+          <p>Mantener una tasa de siniestralidad de cero mediante capacitación constante a conductores, escolta inteligente y monitoreo 24/7 de la carga.</p>
+        </div>
+
+        <!-- Objetivo 3 -->
+        <div class="objetivo-card">
+          <div class="objetivo-number">03</div>
+          <h3>Innovación en Tracking</h3>
+          <p>Integrar sistemas IoT avanzados en toda nuestra flota, permitiendo a nuestros clientes visibilidad de temperatura e ubicación exacta en tiempo real.</p>
+        </div>
+
+        <!-- Objetivo 4 -->
+        <div class="objetivo-card">
+          <div class="objetivo-number">04</div>
+          <h3>Eficiencia de Costos</h3>
+          <p>Reducir costos operativos de transporte para nuestros socios comerciales optimizando rutas dinámicas y disminuyendo retornos vacíos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Compartido -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Info de marca -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: var(--primary-white);">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 5L90 28.1V74.4L50 97.5L10 74.4V28.1L50 5Z" fill="url(#footer-logo-gradient)" />
+              <path d="M30 45L40 45L43 37L70 37V55L65 55L63 60L57 60L55 55L45 55L43 60L37 60L35 55L30 55V45Z" fill="#ff6b00" />
+              <circle cx="41" cy="60" r="4" fill="white" />
+              <circle cx="61" cy="60" r="4" fill="white" />
+              <path d="M58 40H67V47H58V40Z" fill="white" />
+              <path d="M48 40H55V47H48V40Z" fill="white" />
+              <defs>
+                <linearGradient id="footer-logo-gradient" x1="10" y1="5" x2="90" y2="97.5" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#2563eb" />
+                  <stop offset="100%" stop-color="#0b1a30" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="logo-text">Tradicom<span>.</span></div>
+          </a>
+          <p>Proveedores de servicios logísticos y transporte de carga por carretera. Seguridad y confianza en cada ruta.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Enlaces internos -->
+        <div class="footer-nav">
+          <h4>Secciones</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Soporte operativo -->
+        <div class="footer-nav">
+          <h4>Soporte</h4>
+          <ul class="footer-links">
+            <li><a href="#">Centro de Ayuda</a></li>
+            <li><a href="#">Cotizador Online</a></li>
+            <li><a href="#">Rastreo Satelital</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+
+        <!-- Suscripción al Newsletter -->
+        <div class="footer-newsletter">
+          <h4>Boletín Informativo</h4>
+          <p>Suscríbete a nuestro boletín para recibir noticias de rutas y tips de logística.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!'); this.reset();">
+            <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo de suscripción">
+            <button type="submit" aria-label="Suscribirse">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Derechos Reservados -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tradicom S.A. Todos los derechos reservados. Diseñado por Antigravity.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
