@@ -4,23 +4,23 @@
 /* CSS Variables */
 :root {
   --primary-white: #ffffff;
-  --bg-light: #f8fafc;
+  --bg-light: #ffffff;
   --bg-dark: #0f172a;
   --bg-dark-card: #1e293b;
   
   /* Brand Colors */
-  --brand-orange: #ff6b00;
-  --brand-orange-hover: #e05e00;
-  --brand-orange-light: #fff0e6;
+  --brand-orange: rgb(254, 0, 0);
+  --brand-orange-hover: rgb(220, 0, 0);
+  --brand-orange-light: rgba(254, 0, 0, 0.08);
   
-  --brand-green: #10b981;
-  --brand-green-hover: #059669;
-  --brand-green-light: #ecfdf5;
+  --brand-green: rgb(121, 255, 122);
+  --brand-green-hover: rgb(90, 220, 91);
+  --brand-green-light: rgba(121, 255, 122, 0.15);
   
-  --brand-blue: #2563eb;
-  --brand-blue-hover: #1d4ed8;
-  --brand-blue-light: #eff6ff;
-  --brand-dark-blue: #0b1a30;
+  --brand-blue: rgb(0, 70, 255);
+  --brand-blue-hover: rgb(0, 56, 204);
+  --brand-blue-light: rgba(0, 70, 255, 0.08);
+  --brand-dark-blue: rgb(0, 11, 40);
   
   /* Typography Colors */
   --text-dark: #0f172a;
@@ -150,7 +150,10 @@ header.scrolled {
 
 header:not(.scrolled) {
   padding: 20px 0;
-  background: transparent;
+  background: rgba(40, 40, 40, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
@@ -228,13 +231,28 @@ header.scrolled .nav-links a.active {
 
 /* Nav Contact CTA Button */
 .nav-cta a {
-  background-color: var(--brand-orange);
+  background-color: var(--brand-blue);
   color: var(--primary-white) !important;
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 70, 255, 0.3);
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.nav-cta a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-20deg);
+  animation: shine 3s infinite;
 }
 
 .nav-cta a::after {
@@ -242,9 +260,9 @@ header.scrolled .nav-links a.active {
 }
 
 .nav-cta a:hover {
-  background-color: var(--brand-orange-hover);
+  background-color: rgb(0, 56, 204);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 70, 255, 0.4);
 }
 
 /* Mobile Menu Toggle */
@@ -276,8 +294,8 @@ header.scrolled .menu-toggle span {
   min-height: 600px;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(11, 26, 48, 0.85) 0%, rgba(15, 23, 42, 0.5) 100%), url('assets/hero_truck.jpg') no-repeat center center/cover;
-  color: var(--primary-white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0) 100%), url('assets/hero_truck.jpg') no-repeat center center/cover;
+  color: var(--text-dark);
   padding-top: 80px;
 }
 
@@ -290,9 +308,9 @@ header.scrolled .menu-toggle span {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--brand-blue-light);
+  border: 1px solid rgba(0, 70, 255, 0.15);
+  color: var(--brand-blue);
   border-radius: 50px;
   margin-bottom: 24px;
   font-weight: 500;
@@ -311,26 +329,85 @@ header.scrolled .menu-toggle span {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 24px;
   letter-spacing: -1px;
 }
 
-.hero h1 span.orange-text {
-  color: var(--brand-orange);
+.hero-sub-title {
+  font-size: 0.5em;
+  font-style: italic;
+  font-weight: 400;
+  margin-right: 0.25em;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: linear-gradient(to right, rgb(0, 66, 242) 0%, rgb(0, 19, 76) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.hero h1 span.blue-text {
-  color: #38bdf8;
+.hero-main-title {
+  font-weight: 800;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-bottom: 0.2em;
+  background: linear-gradient(to right, rgb(0, 66, 242) 0%, rgb(0, 19, 76) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.85);
+.hero-main-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5em;
+  height: 5px;
+  background: linear-gradient(to right, rgb(115, 242, 116) 0%, rgb(115, 242, 116) 40%, rgb(241, 0, 0) 40%, rgb(241, 0, 0) 75%, rgb(0, 66, 242) 75%, rgb(0, 66, 242) 100%);
+  border-radius: 2px;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+.hero p.slogan {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--brand-blue);
+  margin-bottom: 15px;
+  max-width: 800px;
+}
+
+.hero p.hero-description {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-body);
   margin-bottom: 40px;
-  max-width: 600px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.slogan-blue {
+  background: linear-gradient(to right, rgb(0, 66, 242) 0%, rgb(0, 19, 76) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.slogan-green {
+  background: linear-gradient(to right, rgb(115, 242, 116) 0%, rgb(0, 152, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
 }
 
 .hero-ctas {
@@ -353,15 +430,35 @@ header.scrolled .menu-toggle span {
 }
 
 .btn-primary {
-  background-color: var(--brand-orange);
+  background-color: var(--brand-blue);
   color: var(--primary-white);
-  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 70, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-20deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
 }
 
 .btn-primary:hover {
-  background-color: var(--brand-orange-hover);
+  background-color: rgb(0, 56, 204);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 70, 255, 0.5);
 }
 
 .btn-secondary {
@@ -530,7 +627,7 @@ header.scrolled .menu-toggle span {
 .slider-control:hover {
   background-color: var(--brand-orange);
   color: var(--primary-white);
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(254, 0, 0, 0.4);
 }
 
 .slider-control-prev {
@@ -825,10 +922,10 @@ header.scrolled .menu-toggle span {
   margin-bottom: 24px;
 }
 
-.beneficio-card:nth-child(1) .beneficio-icon { background-color: var(--brand-orange-light); color: var(--brand-orange); }
-.beneficio-card:nth-child(2) .beneficio-icon { background-color: var(--brand-blue-light); color: var(--brand-blue); }
-.beneficio-card:nth-child(3) .beneficio-icon { background-color: var(--brand-green-light); color: var(--brand-green); }
-.beneficio-card:nth-child(4) .beneficio-icon { background-color: var(--brand-orange-light); color: var(--brand-orange); }
+.beneficio-card:nth-child(1) .beneficio-icon { background-color: var(--brand-orange); color: var(--primary-white); }
+.beneficio-card:nth-child(2) .beneficio-icon { background-color: var(--brand-blue); color: var(--primary-white); }
+.beneficio-card:nth-child(3) .beneficio-icon { background-color: var(--brand-green); color: var(--primary-white); }
+.beneficio-card:nth-child(4) .beneficio-icon { background-color: var(--brand-orange); color: var(--primary-white); }
 
 .beneficio-icon svg {
   width: 28px;
@@ -871,7 +968,7 @@ header.scrolled .menu-toggle span {
   position: absolute;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 70, 255, 0.15) 0%, transparent 70%);
   top: -150px;
   right: -150px;
   border-radius: 50%;
@@ -1080,7 +1177,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 4fr 2fr 2fr 4fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-bottom: 60px;
 }
@@ -1258,15 +1355,15 @@ footer {
 @keyframes pulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7);
+    box-shadow: 0 0 0 0 rgba(254, 0, 0, 0.7);
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 8px rgba(255, 107, 0, 0);
+    box-shadow: 0 0 0 8px rgba(254, 0, 0, 0);
   }
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+    box-shadow: 0 0 0 0 rgba(254, 0, 0, 0);
   }
 }
 
@@ -1292,7 +1389,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 20%, rgba(0, 70, 255, 0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1337,6 +1434,63 @@ footer {
 .intro-text p {
   margin-bottom: 24px;
   font-size: 1.05rem;
+}
+
+.experience-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  background-color: var(--bg-light);
+  padding: 15px 25px;
+  border-radius: var(--radius-md);
+  border-left: 5px solid var(--brand-blue);
+  box-shadow: var(--shadow-sm);
+  width: fit-content;
+}
+
+.exp-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-text-1 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: -5px;
+}
+
+.exp-number {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(to right, rgb(0, 66, 242) 0%, rgb(0, 19, 76) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.exp-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp-text-2 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--brand-blue);
+}
+
+.exp-text-3 {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-body);
+  letter-spacing: 0.5px;
 }
 
 .intro-carousel {
@@ -1453,7 +1607,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 80%, rgba(255, 107, 0, 0.12) 0%, transparent 60%);
+  background: radial-gradient(circle at 20% 80%, rgba(254, 0, 0, 0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1504,6 +1658,18 @@ footer {
 }
 
 @media (max-width: 992px) {
+  .hero {
+    height: auto;
+    padding: 120px 0 80px 0;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0.4) 100%), url('assets/hero_truck.jpg') no-repeat center center/cover;
+  }
+  .hero-content {
+    margin: 0 auto;
+  }
+  .hero-content .badge {
+    justify-content: center;
+  }
   .hero h1 {
     font-size: 3.25rem;
   }
@@ -1612,17 +1778,18 @@ footer {
     transform: rotate(-45deg) translate(5px, -5px);
   }
   
+
   .hero {
     height: auto;
     padding: 150px 0 80px 0;
   }
-  
+
   .hero h1 {
     font-size: 2.75rem;
   }
   
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     margin-bottom: 30px;
   }
   
